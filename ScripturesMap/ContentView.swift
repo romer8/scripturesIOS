@@ -40,19 +40,14 @@ struct ScriptureBrowser: View{
 }
 struct Volumebrowser: View{
     var book: Book
-    @Environment(\.presentationMode) var presentationMode
     var body: some View{
         List{
             ForEach(book.get_RangeOfChapter(), id: \.self){chapter in
                 if chapter != "0" {
                     NavigationLink("Chapter \(chapter)", destination: Chaptersbrowser(bookId: book.id, chapterId: Int(chapter)!))
-                        .navigationTitle("Chapter \(chapter)")
-
                 }
                 else{
-                    Chaptersbrowser(bookId: book.id, chapterId: Int(chapter)!)
-                        .navigationTitle("\(book.getFullName())")
-
+                    Chaptersbrowser(bookId: book.id, chapterId: Int(chapter)!, bookName: book.getFullName())
                 }
             }
         }
@@ -63,18 +58,29 @@ struct Volumebrowser: View{
 struct Chaptersbrowser: View{
     var bookId: Int
     var chapterId: Int
+    var bookName: String = "Default"
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
 
     var body: some View{
-        VStack{
-            Map(coordinateRegion: $region)
-            ScrollView(){
-                VStack{
-                    ForEach(GeoDatabase.shared.versesForScriptureBookId(bookId, chapterId)){verse in
-                        Text(verse.text)
+        ScrollView(){
+            if String(chapterId) != "0"{
+                    VStack{
+                        Map(coordinateRegion: $region)
+                        ForEach(GeoDatabase.shared.versesForScriptureBookId(bookId, chapterId)){verse in
+                            Text(verse.text)
+                        }
                     }
-                }
+                    .navigationTitle("Chapter \(chapterId)")
             }
+            else{
+                    VStack{
+                        ForEach(GeoDatabase.shared.versesForScriptureBookId(bookId, chapterId)){verse in
+                            Text(verse.text)
+                        }
+                    }
+                    .navigationTitle("\(bookName)")
+            }
+
         }
 
         
