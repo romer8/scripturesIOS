@@ -11,17 +11,17 @@ import WebKit
 import MapKit
 
 struct ContentView: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView{
-
             List{
                 ForEach(GeoDatabase.shared.volumes()){ volume in
                     NavigationLink(volume.getFullName(), destination: ScriptureBrowser(volumeBook: volume))
                 }
             }
-//            .navigationTitle("Bolivia")
-
+            .navigationTitle("Scriptures")
         }
+
     }
 }
 
@@ -29,36 +29,35 @@ struct ScriptureBrowser: View{
     var volumeBook: Book
     var body: some View{
         GeometryReader {g in
-                NavigationView{
-                    List{
-                        ForEach(GeoDatabase.shared.booksForParentId(volumeBook.id)){ singleBook in
-                            NavigationLink(singleBook.getFullName(), destination: Volumebrowser(book: singleBook))
-                        }
-                    }
-//                    .navigationBarTitle(volumeBook.fullName)
+            List{
+                ForEach(GeoDatabase.shared.booksForParentId(volumeBook.id)){ singleBook in
+                    NavigationLink(singleBook.getFullName(), destination: Volumebrowser(book: singleBook))
+                }
             }
         }
-
+        .navigationTitle(volumeBook.getFullName())
     }
 }
 struct Volumebrowser: View{
     var book: Book
+    @Environment(\.presentationMode) var presentationMode
     var body: some View{
-//        ScrollView{
-            NavigationView{
-                    List{
-                        ForEach(book.get_RangeOfChapter(), id: \.self){chapter in
-                            if chapter != "0" {
-                                NavigationLink("Chapter \(chapter)", destination: Chaptersbrowser(bookId: book.id, chapterId: Int(chapter)!))
-                            }
-                            else{
-                                Chaptersbrowser(bookId: book.id, chapterId: Int(chapter)!)
-                            }
-                        }
-                    }
-//                    .navigationTitle(book.getFullName())
+        List{
+            ForEach(book.get_RangeOfChapter(), id: \.self){chapter in
+                if chapter != "0" {
+                    NavigationLink("Chapter \(chapter)", destination: Chaptersbrowser(bookId: book.id, chapterId: Int(chapter)!))
+                        .navigationTitle("Chapter \(chapter)")
+
+                }
+                else{
+                    Chaptersbrowser(bookId: book.id, chapterId: Int(chapter)!)
+                        .navigationTitle("\(book.getFullName())")
+
+                }
             }
-//        }
+        }
+        .navigationTitle(book.getFullName())
+
     }
 }
 struct Chaptersbrowser: View{
@@ -77,6 +76,7 @@ struct Chaptersbrowser: View{
                 }
             }
         }
+
         
     }
 
