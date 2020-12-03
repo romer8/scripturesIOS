@@ -12,6 +12,7 @@ import MapKit
 
 struct ContentView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     var body: some View {
         NavigationView{
             List{
@@ -20,13 +21,36 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Scriptures")
+            Map(coordinateRegion: $region)
+//            MapViewPro()
+
         }
 
     }
 }
 
+//class mapData: ObservableObject{
+//    //change to current location once is done//
+//    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+//    @Published var geoPlaces:[GeoPlace] = []
+//
+//    func getGeoLocations()->[GeoPlace]{
+//        return geoPlaces
+//    }
+//
+//}
+//struct MapViewPro: View {
+//    @EnvironmentObject var mapD: mapData
+//    var body: some View{
+//        Map(coordinateRegion: $mapD.region)
+//    }
+//
+//}
+
 struct ScriptureBrowser: View{
     var volumeBook: Book
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+
     var body: some View{
         GeometryReader {g in
             List{
@@ -36,10 +60,13 @@ struct ScriptureBrowser: View{
             }
         }
         .navigationTitle(volumeBook.getFullName())
+        Map(coordinateRegion: $region)
+
     }
 }
 struct Volumebrowser: View{
     var book: Book
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     var body: some View{
         List{
             ForEach(book.get_RangeOfChapter(), id: \.self){chapter in
@@ -52,6 +79,7 @@ struct Volumebrowser: View{
             }
         }
         .navigationTitle(book.getFullName())
+        Map(coordinateRegion: $region)
 
     }
 }
@@ -59,34 +87,34 @@ struct Chaptersbrowser: View{
     var bookId: Int
     var chapterId: Int
     var bookName: String = "Default"
+    var collector: myGeoPlaceCollector = myGeoPlaceCollector()
+
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
-
+    func newData() -> String{
+        let htmlS = ScriptureRenderer.shared
+        let geoplcs = GeoDatabase.shared.geoPlacesForScriptureBookId(bookId: bookId, chapter: chapterId)
+//        htmlS.injectGeoPlaceCollector(collector!)
+        let htmlString = htmlS.htmlForBookId(bookId, chapter: chapterId)
+        return htmlString
+    }
     var body: some View{
-        ScrollView(){
-            if String(chapterId) != "0"{
-                    VStack{
-                        Map(coordinateRegion: $region)
-                        ForEach(GeoDatabase.shared.versesForScriptureBookId(bookId, chapterId)){verse in
-                            Text(verse.text)
-                        }
-                    }
-                    .navigationTitle("Chapter \(chapterId)")
-            }
-            else{
-                    VStack{
-                        ForEach(GeoDatabase.shared.versesForScriptureBookId(bookId, chapterId)){verse in
-                            Text(verse.text)
-                        }
-                    }
-                    .navigationTitle("\(bookName)")
-            }
+        if String(chapterId) != "0"{
 
+            VStack{
+                Map(coordinateRegion: $region)
+                WebView(request: nil, html: newData())
+            }
+            .navigationTitle("Chapter \(chapterId)")
+        }
+        else{
+            WebView(request: nil, html: newData())
+                .navigationTitle("\(bookName)")
         }
 
-        
     }
 
 }
+
 struct WebView : UIViewRepresentable {
     let request: URLRequest?
     let html: String?
@@ -99,6 +127,7 @@ struct WebView : UIViewRepresentable {
                 
         }else {
             if let htmlString = html {
+                print(htmlString)
                 uiView.loadHTMLString(htmlString, baseURL: nil)
                 
             } else {
@@ -106,21 +135,10 @@ struct WebView : UIViewRepresentable {
                 
             }
         }
-        
     }
+    
 }
-func webView2(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    guard
-        let path = Bundle.main.path(forResource: "style", ofType: "css"),
-        let cssString = try? String(contentsOfFile: path).components(separatedBy: .newlines).joined()
-    else {
-        return
-    }
 
-
-    let jsString = "var style = document.createElement('style'); style.innerHTML = '\(cssString)'; document.head.appendChild(style);"
-    webView.evaluateJavaScript(jsString)
-}
 struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()

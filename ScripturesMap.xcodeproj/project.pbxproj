@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		FC203405256E25FA00ECEA38 /* ScriptureRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203402256E25FA00ECEA38 /* ScriptureRenderer.swift */; };
 		FC203406256E25FA00ECEA38 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203403256E25FA00ECEA38 /* String+Extensions.swift */; };
 		FC203407256E25FA00ECEA38 /* GeoPlaceCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203404256E25FA00ECEA38 /* GeoPlaceCollector.swift */; };
+		FC20344025780FB900ECEA38 /* myGeoPlaceCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC20343F25780FB800ECEA38 /* myGeoPlaceCollector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		FC203402256E25FA00ECEA38 /* ScriptureRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptureRenderer.swift; sourceTree = "<group>"; };
 		FC203403256E25FA00ECEA38 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FC203404256E25FA00ECEA38 /* GeoPlaceCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoPlaceCollector.swift; sourceTree = "<group>"; };
+		FC20343F25780FB800ECEA38 /* myGeoPlaceCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGeoPlaceCollector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,6 @@
 				4F575B29E56C3580087C6466 /* Pods-ScripturesMapTests.debug.xcconfig */,
 				5F30B46F19802F88E13BF753 /* Pods-ScripturesMapTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -215,6 +216,7 @@
 				FC2033F2256E25AA00ECEA38 /* GeoPlace.swift */,
 				FC2033F3256E25AA00ECEA38 /* GeoTag.swift */,
 				FC2033F4256E25AA00ECEA38 /* Scripture.swift */,
+				FC20343F25780FB800ECEA38 /* myGeoPlaceCollector.swift */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -488,6 +490,7 @@
 				FC2033F7256E25AA00ECEA38 /* GeoPlace.swift in Sources */,
 				FC2033C3256E252600ECEA38 /* ContentView.swift in Sources */,
 				FC203407256E25FA00ECEA38 /* GeoPlaceCollector.swift in Sources */,
+				FC20344025780FB900ECEA38 /* myGeoPlaceCollector.swift in Sources */,
 				FC2033F8256E25AA00ECEA38 /* GeoTag.swift in Sources */,
 				FC2033C1256E252600ECEA38 /* ScripturesMapApp.swift in Sources */,
 			);

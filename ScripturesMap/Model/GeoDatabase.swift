@@ -175,6 +175,20 @@ class GeoDatabase {
             return []
         }
     }
+    func geoPlacesForScriptureBookId(bookId: Int, chapter: Int) -> [GeoPlace] {
+        do {
+            var geoplacess = [GeoPlace]()
+            let verses = versesForScriptureBookId(bookId, chapter)
+            for verse in verses{
+                let geoplaceAlone = geoTagsForScriptureId(verse.id).map { $0.0 }
+                geoplacess.append(contentsOf: geoplaceAlone)
+            }
+            print(geoplacess)
+            return geoplacess
+        } catch {
+            return []
+        }
+    }
 
     //
     // Return an array of strings listing the titles of all scripture volumes.
