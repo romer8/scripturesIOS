@@ -78,6 +78,7 @@ struct GeoPlace : TableRecord, FetchableRecord, Identifiable, Hashable {
         }
     }
 
+
     // MARK: - Helpers
 
     // This helper is static because I need to use it in the initializer

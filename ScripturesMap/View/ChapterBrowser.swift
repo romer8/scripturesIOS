@@ -8,50 +8,13 @@
 import SwiftUI
 
 struct Chaptersbrowser: View{
-//    var bookId: Int
-//    var chapterId: Int
-//    var bookName: String = "Default"
     @ObservedObject var geoViewModel: GeoViewModel
     var book: Book {
         GeoDatabase.shared.bookForId(geoViewModel.bookId)
     }
-    
-//    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
-    
-//    func newData() -> String{
-//        let htmlS = ScriptureRenderer.shared
-//        let geoplcs = GeoDatabase.shared.geoPlacesForScriptureBookId(bookId: bookId, chapter: chapterId)
-////        htmlS.injectGeoPlaceCollector(collector!)
-//        let htmlString = htmlS.htmlForBookId(bookId, chapter: chapterId)
-//        return htmlString
-//    }
     var body: some View{
-
-        if geoViewModel.chapter > 0{
-            VStack{
-                MapView2(geoViewModel: geoViewModel)
-                
-                WebView(request: nil, html: geoViewModel.html)
-            }
-            .navigationTitle(title())
-        }
-        else{
-            WebView(request: nil, html: geoViewModel.html)
-                .navigationTitle(title())
-        }
-//        if String(chapterId) != "0"{
-//
-//            VStack{
-//                Map(coordinateRegion: $region)
-//                WebView(request: nil, html: )
-//            }
-//            .navigationTitle("Chapter \(chapterId)")
-//        }
-//        else{
-//            WebView(request: nil, html: newData())
-//                .navigationTitle("\(bookName)")
-//        }
-
+        mapOrNot(title: title(), geoModel: geoViewModel)
+        
     }
     private func title()-> String {
         if geoViewModel.chapter > 0{
@@ -59,10 +22,7 @@ struct Chaptersbrowser: View{
         } else{
             return book.fullName
         }
-        
-        
     }
-
 }
 
 //struct ChapterBrowser_Previews: PreviewProvider {
@@ -70,3 +30,41 @@ struct Chaptersbrowser: View{
 //        ChapterBrowser()
 //    }
 //}
+
+extension View {
+    func mapOrNot (title:String, geoModel: GeoViewModel) -> some View{
+        self.modifier(mapModifier(singleTitle: title, geoModel: geoModel))
+    }
+
+}
+struct mapModifier: ViewModifier {
+    @State var singleTitle: String
+    @State var geoModel: GeoViewModel
+    func body(content: Content) -> some View {
+        return VStack{
+            if geoModel.chapter > 0 && isBookOfMormon(bookId: geoModel.bookId) == false {
+                MapView2(geoViewModel: geoModel)
+                WebView(request: nil, html: geoModel.html)
+                    .injectNavigationHandler { geoPlaceId in
+                        let myGeoPlace = geoModel.getGeoPlaceFromGeoId(geoId: geoPlaceId)
+                        geoModel.zoomToGeoPlace(geoplace: myGeoPlace)
+                        print(myGeoPlace.latitude)
+                    }
+            }
+            else{
+               WebView(request: nil, html: geoModel.html)
+            }
+        }
+        .navigationTitle(singleTitle)
+    }
+    private func isBookOfMormon(bookId: Int) -> Bool{
+        if (bookId < 201 || bookId > 219) {
+         print("flase")
+         return false
+        }
+        else {
+            return true
+        }
+        
+    }
+}

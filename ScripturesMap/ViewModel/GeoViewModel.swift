@@ -30,7 +30,6 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
         self.chapter = chapter
         html = ScriptureRenderer.shared.htmlForBookId(bookId, chapter: chapter)
         makeNewCenter()
-        
     }
     
     func makeNewCenter(){
@@ -40,18 +39,29 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
                 latitude: geoPlace.latitude,
                 longitude: geoPlace.longitude))
        }
+//        print("please")
+//        print(coordinates.count)
         mapRegion = MKCoordinateRegion(coordinates: coordinates)
 
+    }
+    func zoomToGeoPlace(geoplace: GeoPlace){
+        let coord = CLLocationCoordinate2D(
+            latitude: geoplace.latitude,
+            longitude: geoplace.longitude)
+        mapRegion = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: geoplace.latitude, longitude: geoplace.longitude),
+            span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        )
     }
     func setGeocodedPlaces(_ places: [GeoPlace]?) {
         if let places = places{
             geoPlaces = places
             geoPlaces = Array(Set(geoPlaces))
-            print("NEW GEOPLACES")
+//            print("NEW GEOPLACES")
 
-            geoPlaces.forEach(){ place in
-                print(place.placename)
-            }
+//            geoPlaces.forEach(){ place in
+////                print(place.placename)
+//            }
             
         }
     }
@@ -66,6 +76,15 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
             annots.append(annotation)
         }
         return annots
+    }
+    func getGeoPlaceFromGeoId(geoId:Int) -> GeoPlace {
+        for geoplace in geoPlaces{
+            if geoplace.id == geoId{
+                return geoplace
+            }
+        }
+        return geoPlaces[0]
+        
     }
     
     

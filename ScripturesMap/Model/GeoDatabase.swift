@@ -183,7 +183,7 @@ class GeoDatabase {
                 let geoplaceAlone = geoTagsForScriptureId(verse.id).map { $0.0 }
                 geoplacess.append(contentsOf: geoplaceAlone)
             }
-            print(geoplacess)
+//            print(geoplacess)
             return geoplacess
         } catch {
             return []
