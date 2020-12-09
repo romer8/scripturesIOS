@@ -40,14 +40,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D8EBD360-6E49-47DB-8033-076A30087FAD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScripturesMap/ViewModel/GeoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "makeNewCenter()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "ScripturesMap/ViewModel/GeoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "makeNewCenter()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,10 +78,134 @@
             filePath = "ScripturesMap/ViewModel/GeoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "navigationToChapter(bookId:chapter:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScripturesMap/View/ChapterBrowser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "Chaptersbrowser"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - 57fd7156fe861508"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of ScripturesMap.Chaptersbrowser.geoViewModel : ScripturesMap.GeoViewModel"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - 2b6dd43925411104"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScripturesMap.Chaptersbrowser.geoViewModel.getter : ScripturesMap.GeoViewModel"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - dd5b7fc525928938"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScripturesMap.Chaptersbrowser.geoViewModel.setter : ScripturesMap.GeoViewModel"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - bbb60b20c682592"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScripturesMap.Chaptersbrowser.geoViewModel.modify : ScripturesMap.GeoViewModel"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - 243e14d3ea40d861"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScripturesMap.Chaptersbrowser.geoViewModel.modify : ScripturesMap.GeoViewModel with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - 100f18254af56d92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScripturesMap.Chaptersbrowser.$geoViewModel.getter : SwiftUI.ObservedObject&lt;ScripturesMap.GeoViewModel&gt;.Wrapper"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "93">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B9109C5-1199-49D8-8338-5D0AC2F63252"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScripturesMap/View/ChapterBrowser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "Chaptersbrowser"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

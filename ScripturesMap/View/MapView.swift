@@ -42,7 +42,6 @@ struct MapView2: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView2 = MKMapView()
         mapView2.delegate = context.coordinator
-        print("NOOO")
         geoViewModel.makeNewCenter()
         mapView2.setRegion(geoViewModel.mapRegion, animated: true)
 
@@ -52,12 +51,12 @@ struct MapView2: UIViewRepresentable {
     func updateUIView(_ view: MKMapView, context: Context) {
         view.setRegion(geoViewModel.mapRegion, animated: true)
         if geoViewModel.geoPlaces.count != view.annotations.count {
-//            geoViewModel.makeNewCenter()
-
             view.removeAnnotations(view.annotations)
             view.addAnnotations(geoViewModel.makeAnnotations())
 //            view.fitAll()
-            view.showAnnotations(geoViewModel.makeAnnotations(), animated: true)
+            if geoViewModel.showAll == true {
+                view.showAnnotations(geoViewModel.makeAnnotations(), animated: true)
+            }
         }
         
 

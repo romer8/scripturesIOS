@@ -11,21 +11,35 @@ import SwiftUI
 //import MapKit
 
 struct ContentView: View {
-    @Environment(\.presentationMode) var presentationMode
 //    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @ObservedObject var geoViewModel:  GeoViewModel
     var body: some View {
         NavigationView{
             List{
                 ForEach(GeoDatabase.shared.volumes()){ volume in
-                    NavigationLink(volume.getFullName(), destination: ScriptureBrowser(volumeBook: volume))
+                    NavigationLink(volume.getFullName(), destination: ScriptureBrowser(volumeBook: volume, geoViewModel: geoViewModel))
+                        .isDetailLink(false)
                 }
             }
             .navigationTitle("Scriptures")
 //            Map(coordinateRegion: $region)
 //            MapViewPro()
+            MapDetailView(geoViewModel:geoViewModel)
 
         }
 
+
+    }
+}
+struct MapDetailView: View {
+    @ObservedObject var geoViewModel: GeoViewModel
+    var body: some View {
+        GeometryReader { geometry in
+            MapView2(geoViewModel: geoViewModel)
+                .onAppear {
+                    geoViewModel.isDetailVisible = geometry.frame(in: .global).maxY > 0
+                }
+        }
     }
 }
 
@@ -200,8 +214,8 @@ struct ContentView: View {
 //    }
 //}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

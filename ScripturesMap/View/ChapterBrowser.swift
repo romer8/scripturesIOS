@@ -9,11 +9,36 @@ import SwiftUI
 
 struct Chaptersbrowser: View{
     @ObservedObject var geoViewModel: GeoViewModel
+//    @State var bookid: Int
+//    @State var chapter: Int
+//    @EnvironmentObject var geoViewModel: GeoViewModel
+    @State private var displayModalDetailView = false
+
     var book: Book {
         GeoDatabase.shared.bookForId(geoViewModel.bookId)
     }
     var body: some View{
-        mapOrNot(title: title(), geoModel: geoViewModel)
+//        mapOrNot(title: title(), geoModel: geoViewModel)
+        WebView(request: nil, html: geoViewModel.html)
+            .injectNavigationHandler { geoPlaceId in
+                geoViewModel.showAll = false
+                let myGeoPlace = geoViewModel.getGeoPlaceFromGeoId(geoId: geoPlaceId)
+                geoViewModel.zoomToGeoPlace(geoplace: myGeoPlace)
+                if !geoViewModel.isDetailVisible {
+                    displayModalDetailView = true
+                }
+            }
+            .navigationBarItems(trailing: Group {
+                if !geoViewModel.isDetailVisible {
+                    Button("Detail") {
+                        displayModalDetailView = true
+                    }
+                }
+            })
+            .sheet(isPresented: $displayModalDetailView) {
+                MapView2(geoViewModel: geoViewModel)
+            }
+        
         
     }
     private func title()-> String {
@@ -34,16 +59,17 @@ struct Chaptersbrowser: View{
 extension View {
     func mapOrNot (title:String, geoModel: GeoViewModel) -> some View{
         self.modifier(mapModifier(singleTitle: title, geoModel: geoModel))
+
     }
 
 }
 struct mapModifier: ViewModifier {
     @State var singleTitle: String
-    @State var geoModel: GeoViewModel
+    @ObservedObject var geoModel: GeoViewModel
     func body(content: Content) -> some View {
         return VStack{
             if geoModel.chapter > 0 && isBookOfMormon(bookId: geoModel.bookId) == false {
-                MapView2(geoViewModel: geoModel)
+//                MapView2(geoViewModel: geoModel)
                 WebView(request: nil, html: geoModel.html)
                     .injectNavigationHandler { geoPlaceId in
                         let myGeoPlace = geoModel.getGeoPlaceFromGeoId(geoId: geoPlaceId)

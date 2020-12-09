@@ -13,7 +13,7 @@ extension MKCoordinateRegion {
     var maxLatitude: CLLocationDegrees = -90.0
     var minLongitude: CLLocationDegrees = 180.0
     var maxLongitude: CLLocationDegrees = -180.0
-    var zoomFactor = 1.0
+    var zoomFactor = 1
     if coordinates.count > 0{
         for coordinate in coordinates {
           let lat = Double(coordinate.latitude)
@@ -33,7 +33,7 @@ extension MKCoordinateRegion {
         }
 //        let span = MKCoordinateSpan(latitudeDelta: 2, longitudeDelta: 2)
 
-        let span = MKCoordinateSpan(latitudeDelta: (maxLatitude - minLatitude) * zoomFactor, longitudeDelta: (maxLongitude - minLongitude) * zoomFactor)
+        let span = MKCoordinateSpan(latitudeDelta: (maxLatitude - minLatitude) * Double(zoomFactor), longitudeDelta: (maxLongitude - minLongitude) * Double(zoomFactor))
         let center = CLLocationCoordinate2DMake((maxLatitude - span.latitudeDelta / 2), (maxLongitude - span.longitudeDelta / 2))
         self.init(center: center, span: span)
 

@@ -11,7 +11,8 @@ import SwiftUI
 struct ScripturesMapApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(geoViewModel: GeoViewModel(bookid: 101, chapterId: 1))
+            
         }
     }
 }

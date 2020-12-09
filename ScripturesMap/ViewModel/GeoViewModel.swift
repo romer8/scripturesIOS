@@ -16,13 +16,17 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
         center: CLLocationCoordinate2D(latitude: 31.7683, longitude: 35.2137),
         span: MKCoordinateSpan(latitudeDelta: 2, longitudeDelta: 2)
     )
-    
+    @Published var showAll: Bool = true
+    private var scaleViewAltitute = 20000
+    @Published var isDetailVisible = false
+
     // Mark: -Initializer
     init(bookid: Int, chapterId: Int) {
         bookId = bookid
         chapter = chapterId
         ScriptureRenderer.shared.injectGeoPlaceCollector(self)
     }
+
     // Mark: - Intents
     
     func navigationToChapter(bookId: Int, chapter:Int){
@@ -30,6 +34,15 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
         self.chapter = chapter
         html = ScriptureRenderer.shared.htmlForBookId(bookId, chapter: chapter)
         makeNewCenter()
+        showAll = true
+    }
+    func fakeInit(bookId: Int, chapter:Int) -> GeoViewModel {
+        self.bookId = bookId
+        self.chapter = chapter
+        ScriptureRenderer.shared.injectGeoPlaceCollector(self)
+        html = ScriptureRenderer.shared.htmlForBookId(bookId, chapter: chapter)
+        makeNewCenter()
+        return self
     }
     
     func makeNewCenter(){
@@ -45,13 +58,17 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
 
     }
     func zoomToGeoPlace(geoplace: GeoPlace){
+        print(geoplace.latitude)
+        print(geoplace.longitude)
+        print(geoplace.viewAltitude)
         let coord = CLLocationCoordinate2D(
             latitude: geoplace.latitude,
             longitude: geoplace.longitude)
         mapRegion = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: geoplace.latitude, longitude: geoplace.longitude),
-            span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+            span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(Int(geoplace.viewAltitude!)/scaleViewAltitute), longitudeDelta: CLLocationDegrees(Int(geoplace.viewAltitude!)/scaleViewAltitute))
         )
+        
     }
     func setGeocodedPlaces(_ places: [GeoPlace]?) {
         if let places = places{
