@@ -24,7 +24,7 @@ struct ContentView: View {
             .navigationTitle("Scriptures")
 //            Map(coordinateRegion: $region)
 //            MapViewPro()
-            MapDetailView(geoViewModel:geoViewModel)
+            MapDetailView(geoViewModel:geoViewModel).edgesIgnoringSafeArea(.all)
 
         }
 
