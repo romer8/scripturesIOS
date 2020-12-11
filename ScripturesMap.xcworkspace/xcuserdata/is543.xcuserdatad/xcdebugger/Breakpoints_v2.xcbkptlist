@@ -46,8 +46,8 @@
             filePath = "ScripturesMap/ViewModel/GeoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "makeNewCenter()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "ScripturesMap/ViewModel/GeoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "makeNewCenter()"
             landmarkType = "7">
          </BreakpointContent>
@@ -87,114 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ScripturesMap/View/ChapterBrowser.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "Chaptersbrowser"
-            landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - 57fd7156fe861508"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of ScripturesMap.Chaptersbrowser.geoViewModel : ScripturesMap.GeoViewModel"
-                  moduleName = "ScripturesMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - 2b6dd43925411104"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScripturesMap.Chaptersbrowser.geoViewModel.getter : ScripturesMap.GeoViewModel"
-                  moduleName = "ScripturesMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "43">
-               </Location>
-               <Location
-                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - dd5b7fc525928938"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScripturesMap.Chaptersbrowser.geoViewModel.setter : ScripturesMap.GeoViewModel"
-                  moduleName = "ScripturesMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "74">
-               </Location>
-               <Location
-                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - bbb60b20c682592"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScripturesMap.Chaptersbrowser.geoViewModel.modify : ScripturesMap.GeoViewModel"
-                  moduleName = "ScripturesMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "14">
-               </Location>
-               <Location
-                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - 243e14d3ea40d861"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScripturesMap.Chaptersbrowser.geoViewModel.modify : ScripturesMap.GeoViewModel with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "ScripturesMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "BC305D5D-3DDD-43C9-B538-99B54933A07E - 100f18254af56d92"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScripturesMap.Chaptersbrowser.$geoViewModel.getter : SwiftUI.ObservedObject&lt;ScripturesMap.GeoViewModel&gt;.Wrapper"
-                  moduleName = "ScripturesMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/ChapterBrowser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "93">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4B9109C5-1199-49D8-8338-5D0AC2F63252"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -206,6 +98,255 @@
             endingLineNumber = "10"
             landmarkName = "Chaptersbrowser"
             landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "1E8B9FA9-105D-481E-B043-3D8D4ACE5049"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "F202F3B4-05C6-4F70-BF37-4F6C245D5835"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.IDEConstraintErrorBreakpoint">
+         <BreakpointContent
+            uuid = "FEBDD811-E0C3-4F0A-B71B-5E308815F748"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.RuntimeIssueBreakpoint">
+         <BreakpointContent
+            uuid = "D37FB51A-EB85-4ED4-9591-F2A27BA5A0AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            type = "65535">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DA4FFB0-40A2-4AE9-9CC0-CC8632C12D4B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScripturesMap/View/ChapterBrowser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A00DCCCF-0F51-4782-BB8E-B06572EA8548"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScripturesMap/View/ChapterBrowser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B3B465D-0C1F-45D5-B127-E3CC0A9745AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScripturesMap/ViewModel/GeoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "setGeocodedPlaces(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01FD2684-7971-4D25-AA28-7D11E029D789"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScripturesMap/View/VolumeBrowser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "01FD2684-7971-4D25-AA28-7D11E029D789 - 3268bfa5f422076b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScripturesMap.Volumebrowser.body.getter : some"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/VolumeBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "01FD2684-7971-4D25-AA28-7D11E029D789 - 9c714c2ebacd4e9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationTitle&lt;A where A1: Swift.StringProtocol&gt;(A1) -&gt; some&gt;&gt;.0 in ScripturesMap.Volumebrowser.body.getter : some"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/VolumeBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1273">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EE2F669-5580-4528-96F1-5251C69CF167"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScripturesMap/View/VolumeBrowser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0EE2F669-5580-4528-96F1-5251C69CF167 - 9c714c2ebacd4e9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationTitle&lt;A where A1: Swift.StringProtocol&gt;(A1) -&gt; some&gt;&gt;.0 in ScripturesMap.Volumebrowser.body.getter : some"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/VolumeBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1273">
+               </Location>
+               <Location
+                  uuid = "0EE2F669-5580-4528-96F1-5251C69CF167 - 8f640effaee8d2a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI._ConditionalContent&lt;SwiftUI.ZStack&lt;&lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationTitle&lt;A where A1: Swift.StringProtocol&gt;(A1) -&gt; some&gt;&gt;.0 in ScripturesMap.Volumebrowser.body.getter : some"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/VolumeBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "287">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2701E1E6-C8B6-4DBE-948A-702591BEDAB1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScripturesMap/View/VolumeBrowser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2701E1E6-C8B6-4DBE-948A-702591BEDAB1 - e0ac02181319ab65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.ZStack&lt;&lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI._ConditionalContent&lt;SwiftUI.ZStack&lt;&lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationTitle&lt;A where A1: Swift.StringProtocol&gt;(A1) -&gt; some&gt;&gt;.0 in ScripturesMap.Volumebrowser.body.getter : some"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/VolumeBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1533">
+               </Location>
+               <Location
+                  uuid = "2701E1E6-C8B6-4DBE-948A-702591BEDAB1 - 979aa613bbac3677"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 (Swift.String) -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.ZStack&lt;&lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI._ConditionalContent&lt;SwiftUI.ZStack&lt;&lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationTitle&lt;A where A1: Swift.StringProtocol&gt;(A1) -&gt; some&gt;&gt;.0 in ScripturesMap.Volumebrowser.body.getter : some"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/VolumeBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "2701E1E6-C8B6-4DBE-948A-702591BEDAB1 - 979aa613bbac3696"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 (Swift.String) -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.ZStack&lt;&lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI._ConditionalContent&lt;SwiftUI.ZStack&lt;&lt;&lt;opaque return type of SwiftUI.NavigationLink.isDetailLink(Swift.Bool) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationTitle&lt;A where A1: Swift.StringProtocol&gt;(A1) -&gt; some&gt;&gt;.0 in ScripturesMap.Volumebrowser.body.getter : some"
+                  moduleName = "ScripturesMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/is543/Documents/ScripturesMap/ScripturesMap/View/VolumeBrowser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1876">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

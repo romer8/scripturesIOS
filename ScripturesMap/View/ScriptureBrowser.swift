@@ -12,12 +12,20 @@ struct ScriptureBrowser: View{
     var volumeBook: Book
 //    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     @ObservedObject var geoViewModel:  GeoViewModel
-
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
     var body: some View{
         GeometryReader {g in
-            List{
+            LazyVGrid(columns: columns,
+                      alignment: .center,
+                      spacing:3){
                 ForEach(GeoDatabase.shared.booksForParentId(volumeBook.id)){ singleBook in
-                    NavigationLink(singleBook.getFullName(), destination:
+                    NavigationLink(singleBook.gridName, destination:
                                     Volumebrowser(book: singleBook, geoViewModel: geoViewModel)
                                     .onAppear{
                                         geoViewModel.showAll = false
@@ -28,8 +36,13 @@ struct ScriptureBrowser: View{
                                         
                                     })
                         .isDetailLink(false)
+                        .font(.system(size: 15))
+
+                        
                 }
             }
+            .padding(.horizontal)
+
 
         }
         .navigationTitle(volumeBook.getFullName())

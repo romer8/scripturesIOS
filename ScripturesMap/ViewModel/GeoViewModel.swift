@@ -24,7 +24,7 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
     init(bookid: Int, chapterId: Int) {
         bookId = bookid
         chapter = chapterId
-        ScriptureRenderer.shared.injectGeoPlaceCollector(self)
+//        ScriptureRenderer.shared.injectGeoPlaceCollector(self)
     }
 
     // Mark: - Intents
@@ -35,14 +35,6 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
         html = ScriptureRenderer.shared.htmlForBookId(bookId, chapter: chapter)
         makeNewCenter()
         showAll = true
-    }
-    func fakeInit(bookId: Int, chapter:Int) -> GeoViewModel {
-        self.bookId = bookId
-        self.chapter = chapter
-        ScriptureRenderer.shared.injectGeoPlaceCollector(self)
-        html = ScriptureRenderer.shared.htmlForBookId(bookId, chapter: chapter)
-        makeNewCenter()
-        return self
     }
     
     func makeNewCenter(){
@@ -94,13 +86,13 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
         }
         return annots
     }
-    func getGeoPlaceFromGeoId(geoId:Int) -> GeoPlace {
+    func getGeoPlaceFromGeoId(geoId:Int) -> GeoPlace? {
         for geoplace in geoPlaces{
             if geoplace.id == geoId{
                 return geoplace
             }
         }
-        return geoPlaces[0]
+        return GeoDatabase.shared.geoPlaceForId(geoId)
         
     }
     
