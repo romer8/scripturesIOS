@@ -17,7 +17,6 @@ struct ContentView: View {
         GridItem(.flexible()),
     ]
     var body: some View {
-//        GeometryReader{ g in
                 NavigationView{
                         ForEach(GeoDatabase.shared.volumes()){ volume in
                             Section(header: Text(volume.getFullName()).fontWeight(.bold)){
@@ -32,7 +31,7 @@ struct ContentView: View {
                                 
                                             NavigationLink(singleBook.gridName, destination:
                                                             Volumebrowser(book: singleBook, geoViewModel: geoViewModel)
-                                                            .background(Color.gray.opacity(0.2))
+                                                            .background(Color.gray.opacity(0.1))
 
                                                             .onAppear{
                                                                  geoViewModel.showAll = false

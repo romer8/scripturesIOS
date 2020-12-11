@@ -24,7 +24,6 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
     init(bookid: Int, chapterId: Int) {
         bookId = bookid
         chapter = chapterId
-//        ScriptureRenderer.shared.injectGeoPlaceCollector(self)
     }
 
     // Mark: - Intents
@@ -44,8 +43,6 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
                 latitude: geoPlace.latitude,
                 longitude: geoPlace.longitude))
        }
-//        print("please")
-//        print(coordinates.count)
         mapRegion = MKCoordinateRegion(coordinates: coordinates)
 
     }
@@ -66,12 +63,6 @@ class GeoViewModel: ObservableObject, GeoPlaceCollector{
         if let places = places{
             geoPlaces = places
             geoPlaces = Array(Set(geoPlaces))
-//            print("NEW GEOPLACES")
-
-//            geoPlaces.forEach(){ place in
-////                print(place.placename)
-//            }
-            
         }
     }
     func makeAnnotations() -> [MKPointAnnotation]{

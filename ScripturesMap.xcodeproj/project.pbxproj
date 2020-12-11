@@ -31,11 +31,9 @@
 		FC203443257ABDAD00ECEA38 /* GeoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203442257ABDAD00ECEA38 /* GeoViewModel.swift */; };
 		FC203446257AD3F800ECEA38 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203445257AD3F800ECEA38 /* MapView.swift */; };
 		FC203448257AF52200ECEA38 /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203447257AF52200ECEA38 /* MKCoordinateRegion.swift */; };
-		FC20344E257D5D5F00ECEA38 /* ScriptureBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC20344D257D5D5F00ECEA38 /* ScriptureBrowser.swift */; };
 		FC203450257D5D8A00ECEA38 /* VolumeBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC20344F257D5D8A00ECEA38 /* VolumeBrowser.swift */; };
 		FC203452257D5DAD00ECEA38 /* ChapterBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203451257D5DAD00ECEA38 /* ChapterBrowser.swift */; };
 		FC203454257D5DEA00ECEA38 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203453257D5DEA00ECEA38 /* WebView.swift */; };
-		FC203456257DA32100ECEA38 /* map+fitall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC203455257DA32100ECEA38 /* map+fitall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,11 +90,9 @@
 		FC203442257ABDAD00ECEA38 /* GeoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewModel.swift; sourceTree = "<group>"; };
 		FC203445257AD3F800ECEA38 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FC203447257AF52200ECEA38 /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
-		FC20344D257D5D5F00ECEA38 /* ScriptureBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptureBrowser.swift; sourceTree = "<group>"; };
 		FC20344F257D5D8A00ECEA38 /* VolumeBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeBrowser.swift; sourceTree = "<group>"; };
 		FC203451257D5DAD00ECEA38 /* ChapterBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterBrowser.swift; sourceTree = "<group>"; };
 		FC203453257D5DEA00ECEA38 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		FC203455257DA32100ECEA38 /* map+fitall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "map+fitall.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +248,6 @@
 				FC203402256E25FA00ECEA38 /* ScriptureRenderer.swift */,
 				FC203403256E25FA00ECEA38 /* String+Extensions.swift */,
 				FC203447257AF52200ECEA38 /* MKCoordinateRegion.swift */,
-				FC203455257DA32100ECEA38 /* map+fitall.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -270,7 +265,6 @@
 			children = (
 				FC2033C2256E252600ECEA38 /* ContentView.swift */,
 				FC203445257AD3F800ECEA38 /* MapView.swift */,
-				FC20344D257D5D5F00ECEA38 /* ScriptureBrowser.swift */,
 				FC20344F257D5D8A00ECEA38 /* VolumeBrowser.swift */,
 				FC203451257D5DAD00ECEA38 /* ChapterBrowser.swift */,
 				FC203453257D5DEA00ECEA38 /* WebView.swift */,
@@ -518,7 +512,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC203456257DA32100ECEA38 /* map+fitall.swift in Sources */,
 				FC203406256E25FA00ECEA38 /* String+Extensions.swift in Sources */,
 				FC2033F5256E25AA00ECEA38 /* Book.swift in Sources */,
 				FC2033EE256E257900ECEA38 /* GeoDatabase.swift in Sources */,
@@ -526,7 +519,6 @@
 				FC203450257D5D8A00ECEA38 /* VolumeBrowser.swift in Sources */,
 				FC203446257AD3F800ECEA38 /* MapView.swift in Sources */,
 				FC203405256E25FA00ECEA38 /* ScriptureRenderer.swift in Sources */,
-				FC20344E257D5D5F00ECEA38 /* ScriptureBrowser.swift in Sources */,
 				FC2033F9256E25AA00ECEA38 /* Scripture.swift in Sources */,
 				FC203448257AF52200ECEA38 /* MKCoordinateRegion.swift in Sources */,
 				FC2033F7256E25AA00ECEA38 /* GeoPlace.swift in Sources */,

@@ -73,13 +73,11 @@ class ScriptureRenderer {
         }
         return geoPlaces
     }
-    //    func htmlForBookId(_ bookId: Int, chapter: Int) -> String {
     func htmlForBookId(_ bookId: Int, chapter: Int) -> String {
         
         let book = GeoDatabase.shared.bookForId(bookId)
         
         collectedGeocodedPlaces = [GeoPlace]()
-        //        collectedGeocodedPlaces = geoplacess
         
         
         var page = """
@@ -104,7 +102,6 @@ class ScriptureRenderer {
         if let collector = geoPlaceCollector {
             collector.setGeocodedPlaces(collectedGeocodedPlaces)
         }
-        //        print(page.convertToHtmlEntities())
         return page.convertToHtmlEntities()
     }
     

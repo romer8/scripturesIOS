@@ -32,7 +32,6 @@ struct WebView : UIViewRepresentable {
             uiView.load(urlRequest)
         }else {
             if let htmlString = html {
-//                print(htmlString)
                 uiView.loadHTMLString(htmlString, baseURL: nil)
                 
             } else {
@@ -64,9 +63,3 @@ struct WebView : UIViewRepresentable {
     static let placeUrl = "https://scriptures.byu.edu/mapscrip/"
     
 }
-
-//struct WebView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WebView()
-//    }
-//}

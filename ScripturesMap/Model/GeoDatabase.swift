@@ -208,16 +208,11 @@ class GeoDatabase {
                 while let row = try rows.next() {
                     books.append(Book(row: row))
                 }
-//                print(books)
-
                 return books
             }
             return books
         } catch {
             return []
         }
-        // NEEDSWORK: get this from the database -- don't hard-code anything
-//        return ["Old Testament", "New Testament", "Book of Mormon",
-//                "Doctrine and Covenants", "Pearl of Great Price"]
     }
 }
